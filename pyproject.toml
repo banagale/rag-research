@@ -1,0 +1,60 @@
+[project]
+name = "rag-research"
+version = "0.1.0"
+description = ""
+authors = [{ name = "Rob Banagale", email = "rob.banagale@eclypsium.com" }]
+readme = "README.md"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "rag-research"
+package-mode = false
+version = "0.1.0"
+description = ""
+authors = ["Rob Banagale <rob.banagale@eclypsium.com>"]
+readme = "README.md"
+packages = [{ include = "rag_research", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+llama-index = "0.12.25"
+openai = "^1.23.0"
+langchain = "0.3.7"
+pydantic = "^2.7.1"
+tiktoken = "^0.7.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.6"
+pytest = "^8.3.5"
+pre-commit = "^4.1.0"
+pytest-asyncio = "^0.25.3"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = [
+    ".venv",
+    ".git",
+    "__pycache__",
+    ".mypy_cache",
+    ".pytest_cache",
+    "node_modules",
+    "build", "dist",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"] # "E", "F" = Flake8; "I" = isort
+fixable = ["ALL"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = ["asyncio: mark a test as an asyncio coroutine"]

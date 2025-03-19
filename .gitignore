@@ -1,0 +1,46 @@
+# ---- macOS System Files ----
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ---- JetBrains / PyCharm ----
+.idea/
+*.iml
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.vscode/
+
+# ---- VS Code ----
+.vscode/
+*.code-workspace
+
+# ---- Python ----
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# ---- Poetry ----
+/.venv/
+
+# ---- Logs & Debugging ----
+*.log
+debug.log
+tmp/
+
+# ---- LLM Caches ----
+embedding_cache.json
+
+# ---- Build & Distribution ----
+dist/
+build/
+*.egg-info/
+pip-wheel-metadata/
+
+# ---- Environment ----
+.env
+.envrc
